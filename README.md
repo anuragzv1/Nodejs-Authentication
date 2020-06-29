@@ -25,6 +25,14 @@ This is a complete authentication system built majorly using Node.js, Ejs , Redi
 6) Run the app using npm start
 7) Go to the browser and type localhost:3000
 
+### Salient Features
+1) Uses Parallel Job server to reduce load on the Main Server
+2) Scalable directory Structure
+3) Easily Deployable
+4) Includes Google OAuth2
+5) Includes Mail Verification of new accounts
+
+
 
 
 
