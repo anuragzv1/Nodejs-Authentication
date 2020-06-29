@@ -49,8 +49,5 @@ This is a complete authentication system built majorly using Node.js, Ejs , Redi
 
 ![Homepage / login](/gitimages/login.png)
 
-![Register](/gitimages/register.png)
-
-![forgot] (/gitimages/forgot.png)
 
 
