@@ -1,0 +1,15 @@
+<div style="border: 1.5px solid gray; width:500px ; margin: auto; padding: 10px;">
+    <center>
+        <h2>Password Reset - Codeial Mails</h2>
+    </center>
+    <br>
+    <br>
+    <center>Hey! <%= user.name %> Here's your one time password reset link , click on the link and follow instructions
+    </center><br><br>
+
+    <center> <a href="https://enigmatic-dawn-54438.herokuapp.com/users/resetpassword/<%= user.resetCode %>"><button
+                style="border:0; width: 250px;height: 50px; background-color: greenyellow; color:white">Reset</button></a>
+    </center><br><br>
+</div>
+<center style="font-size: 8px; font-weight: 200;">This is an auto generated mail sent by Codeial servers, please do not
+    reply to it.</center>

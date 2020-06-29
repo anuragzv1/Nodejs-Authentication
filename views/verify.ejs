@@ -1,0 +1,41 @@
+
+<!-- Verify the User Page! -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verification - Codeil</title>
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="/public/css/verification.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+</head>
+
+<body>
+    <%- include('_header') %>
+
+    <div id="verification_main">
+        <% if(notverified){ %>
+        <main style="height: 90vh; display: flex; align-items: center; justify-content: center; ">
+            <div id="not_verified">
+                Go to your email and click on the verification button <br>to continue to your profile!<br>
+                <br>
+                <button id="resend_code" onclick="resendEmail('<%=user.id%>')">Resend Verification Mail</button>
+                <br>
+                <button id="resend_code" onclick="window.location.href='/profile'">Go To Profile</button>
+            </div>
+        </main>
+        <% }else{ %>
+
+            <% }%>
+        
+    </div>
+
+
+    <%- include ('_footer') %>
+    <script src="../../public/js/index.js"></script>
+    <script src="../../public/js/verification.js"></script>
+</body>
+
+</html>

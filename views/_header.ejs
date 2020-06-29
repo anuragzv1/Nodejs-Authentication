@@ -1,0 +1,41 @@
+<!-- Header partial -->
+
+<div id="header">
+    <!-- If the user is logged in then show the  logout and password reset buttons -->
+    <% if(locals.user){ %>
+    <div id="logoAndIcons">
+        <h2 id="logotext">Codeial</h2>
+        <ul id="icon_ul">
+            <li> <i class="fa fa-user"></i> </li>
+            <li> <i class="fa fa-bell"></i> </li>
+            <li> <i class="fa fa-cog"></i> </li>
+        </ul>
+    </div>
+    <div>
+        <button id="home" class="navbtn" onclick="window.location.href='/'">Home <i class="fa fa-home"></i> </button>
+        <button id="logoutbtn" class="navbtn" onclick="logout()">Logout <i class="fas fa-sign-out-alt"></i> </button>
+        <button id="forgotbtn" class="navbtn" onclick="forgotAfterLogin()"> Reset Pass <i class=" fas fa-lock"></i>
+        </button>
+        <div id="forgotAfterLogin">
+            <div id="closefal"> <i style="color: white;" class="fas fa-times" onclick="hidefal()"></i> </div>
+            <center style="color: white;">Password reset</center><br>
+            <input type="password" placeholder="Current password" id="current_pass">
+            <input type="password" placeholder="New password" id="new_pass_1">
+            <input type="password" placeholder="Repeat password" id="new_pass_2">
+            <button type="submit" onclick="resetPass('<%= user._id %>')">Reset</button>
+        </div>
+    </div>
+
+    <%}else{ %>
+    <div>
+        <button id="signin" class="navbtn">Logout</button>
+        <button id="signup" class="navbtn">Logout</button>
+    </div>
+    <% }%>
+</div>
+<% if(locals.user){ %>
+<div id="header2">
+    <span id="user_name"><%= user.name %> </span>
+</div>
+
+<%}%>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="/public/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="/public/css/resetpage.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+
+</head>
+
+<body>
+    <%- include ('_header') %>
+    <main
+        style="height:90vh;display: flex; flex-direction: column; align-items: center; justify-content: center;width: 98vw;">
+        <div class="change_pass_div">
+            <center>
+                <H1>Reset Password</H1><br>
+            </center>
+            <input type="password" placeholder="New password" name="new_pass" id="new_pass"><br>
+            <input type="password" placeholder="Password confirm" name="new_pass_confirm" id="new_pass_confirm"><br>
+            <center><button type="submit" id="reset_button" onclick="change_pass()" disabled>Reset</button></center>
+        </div>
+        <div id="messageDiv">
+
+        </div>
+    </main>
+    <% if (locals.flash.success && locals.flash.success.length > 0) { %>
+    <script>
+        new Noty({
+            theme: 'sunset',
+            text: '<%= locals.flash.success %>',
+            type: 'success',
+            layout: 'bottomLeft',
+            timeout: 1500
+        }).show();
+    </script>
+
+    <% } %>
+
+    <% if (locals.flash.error && locals.flash.error.length > 0) { %>
+    <script>
+        new Noty({
+            theme: 'sunset',
+            text: '<%= locals.flash.error %>',
+            type: 'error',
+            layout: 'bottomLeft',
+            timeout: 2500
+        }).show();
+    </script>
+
+    <% } %>
+
+    <%- include ('_footer') %>
+    <script src="/public/js/resetpage.js"></script>
+</body>
+
+</html>

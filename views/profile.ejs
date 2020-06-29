@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Profile Ejs template -->
+<html>
+
+<head>
+    <title>
+        <%= user.name %> @Codial
+    </title>
+    <link rel="stylesheet" href="/public/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+
+</head>
+
+<body>
+    <%- include ('_header') %>
+    <main style="height:90vh;display: flex; align-items: center; justify-content: center;width: 98vw;">
+        <center>
+            <h1>Something Cool Cooking up!</h1><br>
+            <i>(Design and code copyrighted!)</i> 
+        </center>
+    </main>
+    <% if (locals.flash.success && locals.flash.success.length > 0) { %>
+    <script>
+        new Noty({
+            theme: 'sunset',
+            text: '<%= locals.flash.success %>',
+            type: 'success',
+            layout: 'bottomLeft',
+            timeout: 1500
+        }).show();
+    </script>
+
+    <% } %>
+
+    <%- include ('_footer') %>
+    <script src="../public/js/index.js"></script>
+</body>
+
+</html>

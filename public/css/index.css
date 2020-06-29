@@ -1,0 +1,179 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: url(../images/main_bg.jpeg);
+    
+}
+
+#main_container{
+    display: flex;
+    /* justify-content: space-between; */
+    width: 800px;
+    height: 240px;
+    background-color: bisque;
+    margin-top: 200px;
+    box-shadow: 1px -1px 10px 6px silver;
+
+}
+
+.indexbtn{
+    width: 120px;
+    height: 80px;
+}
+
+#registerdiv , #forgotdiv{
+    display: none;
+}
+
+#three_buttons{
+    display: flex;
+    flex-direction: column;
+}
+#three_buttons i{
+    font-size:20px;
+}
+.button-active{
+    background-color: #66ff00;
+    color: white;
+}
+
+#three_buttons button{
+    font-size: 13px;
+    border: 0;
+    box-sizing: border-box;
+    border-right:1px solid #e3e3e3;
+    cursor: pointer;
+}
+
+#three_buttons button:hover{
+    border-bottom: 1px solid black;
+}
+
+
+.white{
+    background-color: white;
+}
+
+#logindiv{
+    width: 530px;
+    background-color: whitesmoke;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logindiv input{
+    border:0;
+    width: 350px;
+    height: 40px;
+    background-color: #e3e3e3;
+    position: relative;
+    padding-left:30px;
+    margin-top: 5px;
+}
+#logindiv i{
+    font-size:14px;
+}
+#codiallogo{
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fa-icon-set{
+    position: absolute;
+    left: 8px;
+    z-index: 1;
+    top: 16px;
+}
+
+#loginsubmit{
+    color: white;
+    font-weight: bold;
+    border: 0;
+    margin-top: 3px;
+    height: 34px;
+    width: 382px;
+    background-color: #66ff00;
+    margin-bottom: 10px;
+}
+
+#registerdiv{
+    width: 530px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+
+
+}
+
+#registerdiv input{
+    border: 0;
+    width: 350px;
+    height: 40px;
+    background-color: #e3e3e3;
+    position: relative;
+    padding-left: 30px;
+    margin-top: 5px;
+}
+
+#register_submit , #forgot_submit{
+    height: 30px;
+    width: 380px;
+    color: white;
+    font-weight: bold;
+    margin-top:3px;
+    border:0;
+    width:100px;
+    background-color: #66ff00;
+}
+
+#forgotdiv{
+    width: 530px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+#forgotdiv input{
+    border: 0;
+    width: 350px;
+    height: 40px;
+    background-color: #e3e3e3;
+    position: relative;
+    padding-left: 30px;
+    margin-top: 5px;
+}
+
+#messageDiv{
+    opacity: 0;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: tomato;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0px 0px 6px 6px silver;
+}
+
+
+#social-login{
+    font-size: 15px;
+}
+
+#social-login i{
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+}
+#social-login i:hover{
+    color: #66ff00;
+}
+

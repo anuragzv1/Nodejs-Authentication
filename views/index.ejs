@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Codeial</title>
+    <link rel="stylesheet" href="../public/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=<%= creds['recaptcha-site-key']%>"></script>
+</head>
+
+<body>
+
+    <div id="main_container">
+        <div id="codiallogo">
+            <img src="../public/images/logo.png" width="150px" height="240px">
+        </div>
+        <!-- The div contains three buttons to show login/register/forgot div -->
+        <div id="three_buttons">
+            <button id="loginbtn" onclick="show('login')" class="button-active indexbtn "> <i
+                    class="fa fa-user"></i><br>
+                Login
+            </button>
+            <button id="registerbtn" onclick="show('register')" class="indexbtn "><i class="fa fa-user-edit"></i><br>
+                Register
+            </button>
+            <button id="forgotbtn" onclick="show('forgot')" class="indexbtn "> <i class="fa fa-lock"></i> <br>
+                Forgot Password?
+            </button>
+        </div>
+
+        <!-- Login div start -->
+        <div id="logindiv">
+            <form action="/users/signin" method="POST">
+                <h3>Codeial Login <i class="fa fa-heart"></i> </h3>
+                <div style="display: flex; flex-direction: row; position: relative;">
+                    <span class="fa-icon-set"><i class="fa fa-envelope"></i></span>
+                    <input type="email" name="email" id="login_email" placeholder="Enter email"><br>
+                </div>
+                <div style="display: flex; flex-direction: row; position: relative;">
+                    <span class="fa-icon-set"><i class="fa fa-lock"></i></span>
+                    <input type="password" name="password" id="login_password" placeholder="Enter Password"><br>
+                </div>
+                <button id="loginsubmit" type="submit">Login</button>
+            </form>
+            <div id="social-login">
+                <a href="users/auth/google"> <i class="fab fa-google"></i> </a>
+            </div>
+        </div>
+        <!-- Login div end -->
+
+        <!-- Register div -->
+        <div id="registerdiv">
+            <div style="display: flex; flex-direction: row; position: relative;">
+                <span class="fa-icon-set"><i class="fa fa-user"></i></span>
+                <input type="text" name="register_name" id="register_name" placeholder="Enter name"><br>
+            </div>
+            <div style="display: flex; flex-direction: row; position: relative;">
+                <span class="fa-icon-set"><i class="fa fa-envelope"></i></span>
+                <input type="email" name="register_email" id="register_email" placeholder="Enter email"><br>
+            </div>
+            <div style="display: flex; flex-direction: row; position: relative;">
+                <span class="fa-icon-set"><i class="fa fa-lock"></i></span>
+                <input type="password" name="register_pass" id="register_pass" placeholder="Enter Password">
+            </div>
+            <button  id="register_submit" onclick="register('<%=creds['recaptcha-site-key'] %>')">Register</button>
+        </div>
+        <!-- Register div ends-->
+
+        <!-- forgot div start -->
+        <div id="forgotdiv">
+            <div style="display: flex; flex-direction: row; position: relative;">
+                <span class="fa-icon-set"><i class="fa fa-envelope"></i></span>
+                <input type="email" id="forgot_email" name="email" placeholder="Enter email">
+            </div>
+            <button id="forgot_submit" onclick="forgotPass()">Reset</button>
+        </div>
+        <!-- forgot div end -->
+    </div>
+
+    <!-- Notification div starts -->
+    <div id="messageDiv">
+
+    </div>
+    <!-- Notification div ends -->
+
+
+    <script src="../public/js/index.js"></script>
+    <% if (locals.flash.success && locals.flash.success.length > 0) { %>
+    <script>
+        new Noty({
+            theme: 'sunset',
+            text: '<%= locals.flash.success %>',
+            type: 'success',
+            layout: 'bottomLeft',
+            timeout: 1500
+        }).show();
+    </script>
+
+    <% } %>
+
+    <% if (locals.flash.error && locals.flash.error.length > 0) { %>
+    <script>
+        new Noty({
+            theme: 'sunset',
+            text: '<%= locals.flash.error %>',
+            type: 'error',
+            layout: 'bottomLeft',
+            timeout: 2500
+        }).show();
+    </script>
+
+    <% } %>
+</body>
+
+</html>

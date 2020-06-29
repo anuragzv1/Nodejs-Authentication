@@ -1,0 +1,16 @@
+<div style="border: 1.5px solid gray; width:500px ; margin: auto; padding: 10px;">
+    <center>
+        <h2>Codeial Mails</h2>
+    </center>
+    <br>
+    <br>
+    <center>Congratulations <%= user.name %> on stepping one step closer to Code! Please verify your account in order
+        to get started!
+    </center><br><br>
+
+    <center> <a href="https://enigmatic-dawn-54438.herokuapp.com/users/verify/<%= user.verificationCode %>"><button
+                style="border:0; width: 250px;height: 50px; background-color: greenyellow; color:white">Verify</button></a>
+    </center><br><br>
+</div>
+<center style="font-size: 8px; font-weight: 200;">This is an auto generated mail sent by Codeial servers, please do not
+    reply to it.</center>

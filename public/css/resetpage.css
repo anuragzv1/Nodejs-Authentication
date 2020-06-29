@@ -1,0 +1,32 @@
+
+body{
+    background: url('../images/main_bg.jpeg');
+}
+
+.change_pass_div{
+    background-color: whitesmoke;
+    padding: 15px;
+    box-shadow: 1px 1px 6px 5px dimgrey;
+    padding-bottom: 25px;
+}
+
+.change_pass_div input[type="password"]{
+    width: 325px;
+    height:37px;
+    margin-bottom: 4px;
+}
+
+.change_pass_div button{
+    width: 200px;
+    height: 35px;
+}
+#messageDiv{
+    margin-top: 20px;
+    opacity: 0;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: tomato;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0px 0px 6px 6px silver;
+}
