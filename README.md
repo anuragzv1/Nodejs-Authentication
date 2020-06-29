@@ -8,7 +8,7 @@ This is a complete authentication system built majorly using Node.js, Ejs , Redi
 ## To Set up this App on your Local Device 
 1) Clone the project using from https://github.com/anuragzv1/Nodejs-Authentication
 2) Extract the Zip and navigate to the root of the extracted folder
-3) Open /config/credentials.json and Fill all the fields in the josn, the description of each feild is given below:
+3) Open /config/credentials.json and Fill all the fields in the josn, the description of each feild is given below:  
  `google-client-id` : Google OAuth Client ID obtainable from https://console.developers.google.com/  
  `google-client-secret` : Google Oauth Client secret obtainable from https://console.developers.google.com/  
  `google-oauth-callbackurl`: Google Oauth callbak url  
