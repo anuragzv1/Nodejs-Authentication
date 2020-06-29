@@ -6,6 +6,7 @@ new application.
 
 This is a complete authentication system built majorly using Node.js, Ejs , Redis and MongoDB.  
 ## To Set up this App on your Local Device 
+
 1) Clone the project using from https://github.com/anuragzv1/Nodejs-Authentication
 2) Extract the Zip and navigate to the root of the extracted folder
 3) Open /config/credentials.json and Fill all the fields in the josn, the description of each feild is given below:  
@@ -26,13 +27,23 @@ This is a complete authentication system built majorly using Node.js, Ejs , Redi
 7) Go to the browser and type localhost:3000
 
 ### Salient Features
+
 1) Uses Parallel Job server to reduce load on the Main Server
 2) Scalable directory Structure
 3) Easily Deployable
 4) Includes Google OAuth2
 5) Includes Mail Verification of new accounts
+6) Intelligent Redirects
 
+### Directory Structure
 
+1) `config` : Contains various cofig files like Kue, Mongoose, Passport local and Google Oauth Strategies etc  
+2) `controllers` : Controllers for various pages like index_controller , profile_controller etc
+3) `mailers` : Contains Mailers for Reset password and Verify User
+4) `public` : All the public css , html , javascript is present in public
+5) `routes` : All the routes properly distributed by index.js
+6) `views` : All the .ejs files and also Email templates are present here
+7) `workers` : Workers for parallel/delayed Jobs 
 
 
 
